@@ -1,4 +1,4 @@
-from Roulette import Roulette
+from src.Roulette import Roulette
 
 
 roulette = Roulette.fromFile('namesFile')

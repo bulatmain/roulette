@@ -48,7 +48,7 @@ class Roulette:
             self.spin()
             return self.shot()
         except Exception as e:
-            raise Exception('All players checked')
+            raise e
 
     def getCheckedPlayersCount(self) -> int:
         return len(self.checkedPlayers)

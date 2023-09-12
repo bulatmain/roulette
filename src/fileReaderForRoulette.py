@@ -11,9 +11,17 @@ class fileReaderForRoulette:
         checkedList = []
 
         for line in file:
-            n, c = line.split('-')
-            names.append(n.strip(' \n'))
-            checkedList.append(cls.strToBool(c.strip(' \n')))
+            try:
+                n, c = line.split('-')
+                n = n.strip(' \n')
+                c = c.strip(' \n')
+                names.append(n)
+                checkedList.append(cls.strToBool(c))
+            except Exception  as e:
+                n = line.strip(' \n')
+                names.append(n)
+                checkedList.append(False)
+
 
         file.close()
 
